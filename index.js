@@ -10,6 +10,7 @@ module.exports = {
     var configMessage = [];
     var _this = this;
 
+    // see: https://github.com/ember-cli/ember-cli/issues/3718
     if (typeof target.import !== 'function' && target.app) {
       target = target.app;
     }
