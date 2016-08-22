@@ -9,6 +9,11 @@ module.exports = {
     var target = parentAddon || app;
     var configMessage = [];
     var _this = this;
+
+    if (typeof target.import !== 'function' && target.app) {
+      target = target.app;
+    }
+
     var o = target.options['ember-cli-bootstrap-sassy'] || { js: true, glyphicons: true };
     this.bootstrapPath = target.bowerDirectory + '/bootstrap-sass/assets/';
 
